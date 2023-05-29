@@ -2,21 +2,10 @@
 import Button from "../components/Button.astro";
 import Singlepage from "../components/Singlepage.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import MainHeader from "../components/MainHeader.astro";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <MainLayout title="Cart" />
+  <MainLayout title="Cart">
   
-    <main class="box">
+    <section class="box">
       <Singlepage
         type="Roman"
         title="Større end os"
@@ -35,9 +24,8 @@ import MainHeader from "../components/MainHeader.astro";
         EAN="9788758838632"
         levering="1-2"
       />
-    </main>
-  </body>
-</html>
+    </section>
+  </MainLayout>
 
 <style>
 
