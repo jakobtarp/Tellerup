@@ -3,8 +3,6 @@ import "../styles/tokens.css";
 import "../styles/base.css";
 import "../styles/global.css";
 const { titel, imgPath, imgPath1, imgPath2, imgPath3, imgPath4, imgPath5, imgPath6, imgPath7, imgPath8, forfatter, part, price, anmeldser, newBadge } = Astro.props;
-
-import Button from "./Button.astro";
 ---
 
 <article class="mt-5 lg:w-[250px] lg:h-[470px] w-[167px] h-[260px] shaddowcard mx-auto mb-2 hover:scale-105 transition duration-300 cursor-pointer">
@@ -21,8 +19,8 @@ import Button from "./Button.astro";
       <img class="lg:w-9 w-6 p-1 mb-1" src={imgPath3} alt="" height="" width="" />
     </div>
   </div>
-  <article class="lg:px-3 p-1 relative">
-    <h3 class="titel">{titel}</h3>
+  <article class="lg:px-3 px-1 relative">
+    <h3 class="titel lg:mt-3">{titel}</h3>
     <p class="forfatter lg:mb-2">{forfatter}</p>
     <p class="part">{part}</p>
     <p class="price lg:my-3">{price}</p>
@@ -56,7 +54,7 @@ import Button from "./Button.astro";
   }
 
   h3 {
-    font-size: var(--font-size-jakob);
+    font-size: var(--font-size-md);
     font-weight: var(--fontSemibold);
   }
 
@@ -90,15 +88,5 @@ import Button from "./Button.astro";
     font-weight: var(--fontBold);
     text-align: center;
     border-top-left-radius: var(--globalBorderRadiusSm);
-  }
-  @media (max-width: 768px) {
-    h3 {
-      padding: var(--sm);
-      font-size: var(--font-size-md);
-      font-weight: var(--fontSemibold);
-      line-height: var(--primaryLineHeight);
-      margin-bottom: 2px;
-      margin-top: 5px;
-    }
   }
 </style>
