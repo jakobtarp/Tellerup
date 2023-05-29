@@ -75,18 +75,6 @@ body {
   /* Font family */
   --globalFont-family: Montserrat;
 
-  /** Font-Size */
-  /* --fontSizeDesktopSm: 12px; */
-  /* --fontSizeDesktopMd: 14px;
-  --fontSizeDesktopML: 31px;
-  --fontSizeDesktopL: 34px;
-
-  --fontSizeMobileSm: 13px;
-  --fontSizeMobileBase: 16px;
-  --fontSizeMobileMd: 20px;
-  --fontSizeMobileML: 25px;
-  --fontSizeMobileL: 31px; */
-
   /* Font weight */
   --fontNormal: 400;
   --fontSemibold: 600;
