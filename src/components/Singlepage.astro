@@ -6,13 +6,13 @@ import Button from "./Button.astro";
 ---
 <section>
   <div class="brødskrummer">
-    <Button link="www.google.dk" variant="tertiary" style="red">Tellerup</Button>
+    <Button link="index.html" variant="tertiary" style="red">Tellerup</Button>
     <div class="arrow">&#10095;</div>
-    <Button link="www.google.dk" variant="tertiary" style="red">Gener</Button>
+    <Button link="genre.html" variant="tertiary" style="red">Genre</Button>
     <div class="arrow">&#10095;</div>
-    <Button link="www.google.dk" variant="tertiary" style="red">Bøger</Button>
+    <Button link="kategoriside.html" variant="tertiary" style="red">Bøger</Button>
     <div class="arrow">&#10095;</div>
-    <Button link="www.google.dk" variant="tertiary" style="red">Større end os</Button>
+    <Button link="kategoriside.html" variant="tertiary" style="red">Større end os</Button>
   </div>
 </section>
 <section class="">
@@ -28,7 +28,7 @@ import Button from "./Button.astro";
     <h1>{title}</h1>
     <div class="forfattare">
       <p>Af</p>
-      <Button link="www.google.dk" variant="tertiary" style="red">Christina Bonde</Button>
+      <Button link="kategoriside.html" variant="tertiary" style="red">Christina Bonde</Button>
     </div>
     <!-- Resumé -->
     <h2>Resumé:</h2>
@@ -59,10 +59,10 @@ import Button from "./Button.astro";
           <div class="info_format">
             <img src="imgs/ebog.webp" alt="book" width="25px" />
             <div class="title_format">
-              <p>E-bog</p>
-              <p><strong>{pris_ebog} DKK</strong></p>
+              <h3>E-bog</h3>
+              <h3><strong>{pris_ebog} DKK</strong></h3>
             </div>
-            <p><s>{tidligere_pris_ebog}</s></p>
+            <h3><s>{tidligere_pris_ebog}</s></h3>
           </div>
           <div class="check">
             <!-- <img class="red_check" src="imgs/check.webp" alt="check" /> -->
@@ -74,10 +74,10 @@ import Button from "./Button.astro";
           <div class="info_format">
             <img src="imgs/lydbog.webp" alt="book" width="35px" />
             <div class="title_format">
-              <p>Lydbog</p>
-              <p><strong>{pris_lydbog} DKK</strong></p>
+              <h3>Lydbog</h3>
+              <h3><strong>{pris_lydbog} DKK</strong></h3>
             </div>
-            <p><s>{tidligere_pris_lydbog} </s></p>
+            <h3><s>{tidligere_pris_lydbog} </s></h3>
           </div>
           <div class="check">
             <!-- <img class="red_check" src="imgs/check.webp" alt="check" /> -->
@@ -97,7 +97,7 @@ import Button from "./Button.astro";
       
 
       <!-- <img  src="imgs/shopping-cart.webp" width="20px"> -->
-      <Button class="flex" link="www.google.dk" variant="primary" size="big" style="white"> Læg i kurv</Button>
+      <Button class="flex" link="kurv.html" variant="primary" size="big" style="white"> Læg i kurv</Button>
       <div class="tilbage">
         <div class="lager">
           <div class="lager_box">
@@ -118,9 +118,9 @@ import Button from "./Button.astro";
     <div>
       <h2>Tags</h2>
       <div class="tags_button">
-        <Button link="www.google.dk" variant="tags" style="white" size="tags">Fantasy</Button>
-        <Button link="www.google.dk" variant="tags" style="white" size="tags">Krimi</Button>
-        <Button link="www.google.dk" variant="tags" style="white" size="tags">Romantik</Button>
+        <Button link="kategoriside.html" variant="tags" style="white" size="tags">Fantasy</Button>
+        <Button link="kategoriside.html" variant="tags" style="white" size="tags">Krimi</Button>
+        <Button link="kategoriside.html" variant="tags" style="white" size="tags">Romantik</Button>
       </div>
     </div>
   </article>
@@ -130,7 +130,7 @@ import Button from "./Button.astro";
     <div class="detaljer_box">
       <div class="detaljer_info">
         <p>Af:</p>
-        <Button link="www.google.dk" variant="tertiary" style="red">Christina Bonde</Button>
+        <Button link="kategoriside.html" variant="tertiary" style="red">Christina Bonde</Button>
       </div>
       <div class="detaljer_info">
         <p>Forlag:</p>
@@ -164,10 +164,6 @@ import Button from "./Button.astro";
   h2 {
     padding-top: 20px;
     padding-bottom: 5px;
-  }
-
-  .title_format p{
-font-size: 16px;
   }
   section {
     display: grid;
