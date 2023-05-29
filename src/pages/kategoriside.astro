@@ -8,17 +8,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-
 import Genre from "../components/Genre.astro";
 ---
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <MainLayout title="Kategorier" />
 <MainHeader title="Kategorier" beskrivelse="Se vores store udvalg" />
 <!-- <button class="">Filtrer</button> -->
 <main>
-  <div class="px-2 lg:px-8">
+  <div class="box-section">
     <div class="grid grid-cols-2 lg:block">
       <div id="mobiledown" class="mobile-down lg:hidden my-auto px-2">
         <Button variant="primary" size="base" style="white">Filtrer</Button>
@@ -40,76 +37,78 @@ import Genre from "../components/Genre.astro";
     </div>
 
     <div class="hidden lg:block showMe">
-      <div class="dropdown-container">
-        <div>
-          <button class="dropdown-button">Kategorier</button>
-          <div class="dropdown">
-            <input class="mb-3 mt-4 ml-2" type="text" class="dropdown-search" placeholder="Søg..." />
-            <div class="dropdown-content">
-              <label><input class="mt-4" type="checkbox" name="option1" />Alle bøger</label><br />
-              <label><input class="mt-4" type="checkbox" name="option2" />Bestsellers</label><br />
-              <label><input class="mt-4" type="checkbox" name="option2" />Nyheder</label><br />
-              <label><input class="mt-4" type="checkbox" name="option2" />Notesbøger</label><br />
-              <label><input class="mt-4 mb-4" type="checkbox" name="option3" />Bogserier</label>
+      <div class="transcontainer">
+        <div class="dropdown-container">
+          <div>
+            <button class="dropdown-button">Kategorier</button>
+            <div class="dropdown">
+              <input class="mb-3 mt-4 ml-2" type="text" class="dropdown-search" placeholder="Søg..." />
+              <div class="dropdown-content">
+                <label><input class="mt-4" type="checkbox" name="option1" />Alle bøger</label><br />
+                <label><input class="mt-4" type="checkbox" name="option2" />Bestsellers</label><br />
+                <label><input class="mt-4" type="checkbox" name="option2" />Nyheder</label><br />
+                <label><input class="mt-4" type="checkbox" name="option2" />Notesbøger</label><br />
+                <label><input class="mt-4 mb-4" type="checkbox" name="option3" />Bogserier</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <button class="dropdown-button">Forfattere</button>
-          <div class="dropdown">
-            <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
-            <div class="dropdown-content cursor-pointer">
-              <label><input class="mt-4" type="checkbox" name="option4" />Christina Bonde</label><br />
-              <label><input class="mt-4" type="checkbox" name="option5" />Bettina Stuhr Lindskow</label><br />
-              <label><input class="mt-4" type="checkbox" name="option4" />Line Wenzel</label><br />
-              <label><input class="mt-4" type="checkbox" name="option5" />Kristoffer J. Andersen</label><br />
-              <label><input class="mt-4" type="checkbox" name="option4" />Louise Hailberg</label><br />
-              <label><input class="mt-4 mb-4" type="checkbox" name="option5" />Kristoffer J. Andersen</label><br />
-              <br />
-              <button class="underline font-bold">Se alle</button>
+          <div>
+            <button class="dropdown-button">Forfattere</button>
+            <div class="dropdown">
+              <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
+              <div class="dropdown-content cursor-pointer">
+                <label><input class="mt-4" type="checkbox" name="option4" />Christina Bonde</label><br />
+                <label><input class="mt-4" type="checkbox" name="option5" />Bettina Stuhr Lindskow</label><br />
+                <label><input class="mt-4" type="checkbox" name="option4" />Line Wenzel</label><br />
+                <label><input class="mt-4" type="checkbox" name="option5" />Kristoffer J. Andersen</label><br />
+                <label><input class="mt-4" type="checkbox" name="option4" />Louise Hailberg</label><br />
+                <label><input class="mt-4 mb-4" type="checkbox" name="option5" />Kristoffer J. Andersen</label><br />
+                <br />
+                <button class="underline font-bold">Se alle</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <button class="dropdown-button">Tags</button>
-          <div class="dropdown">
-            <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
-            <div class="dropdown-content cursor-pointer">
-              <label><input class="mt-4" type="checkbox" name="option7" />Fantasy</label><br />
-              <label><input class="mt-4" type="checkbox" name="option8" />Krimi</label><br />
-              <label><input class="mt-4" type="checkbox" name="option7" />Venskab</label><br />
-              <label><input class="mt-4" type="checkbox" name="option8" />Realisme</label><br />
-              <label><input class="mt-4" type="checkbox" name="option8" />Ungdom</label><br />
-              <label><input class="mt-4 mb-4" type="checkbox" name="option9" />Tilbud</label>
+          <div>
+            <button class="dropdown-button">Tags</button>
+            <div class="dropdown">
+              <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
+              <div class="dropdown-content cursor-pointer">
+                <label><input class="mt-4" type="checkbox" name="option7" />Fantasy</label><br />
+                <label><input class="mt-4" type="checkbox" name="option8" />Krimi</label><br />
+                <label><input class="mt-4" type="checkbox" name="option7" />Venskab</label><br />
+                <label><input class="mt-4" type="checkbox" name="option8" />Realisme</label><br />
+                <label><input class="mt-4" type="checkbox" name="option8" />Ungdom</label><br />
+                <label><input class="mt-4 mb-4" type="checkbox" name="option9" />Tilbud</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <button class="dropdown-button">Aldersgruppe</button>
-          <div class="dropdown">
-            <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
-            <div class="dropdown-content cursor-pointer">
-              <label><input class="mt-4" type="checkbox" name="option7" />0-2 år</label><br />
-              <label><input class="mt-4" type="checkbox" name="option8" />3-5 år</label><br />
-              <label><input class="mt-4" type="checkbox" name="option7" />6-10 år</label><br />
-              <label><input class="mt-4" type="checkbox" name="option8" />10-15 år</label><br />
-              <label><input class="mt-4 mb-4" type="checkbox" name="option8" />Over 15 år</label>
+          <div>
+            <button class="dropdown-button">Aldersgruppe</button>
+            <div class="dropdown">
+              <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
+              <div class="dropdown-content cursor-pointer">
+                <label><input class="mt-4" type="checkbox" name="option7" />0-2 år</label><br />
+                <label><input class="mt-4" type="checkbox" name="option8" />3-5 år</label><br />
+                <label><input class="mt-4" type="checkbox" name="option7" />6-10 år</label><br />
+                <label><input class="mt-4" type="checkbox" name="option8" />10-15 år</label><br />
+                <label><input class="mt-4 mb-4" type="checkbox" name="option8" />Over 15 år</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <button class="dropdown-button">Format</button>
-          <div class="dropdown">
-            <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
-            <div class="dropdown-content cursor-pointer">
-              <label><input class="mt-4" type="checkbox" name="option7" />Indbundet</label><br />
-              <label><input class="mt-4" type="checkbox" name="option8" />E-bog</label><br />
-              <label><input class="mt-4 mb-4" type="checkbox" name="option9" />Lydbog</label>
+          <div>
+            <button class="dropdown-button">Format</button>
+            <div class="dropdown">
+              <input class="mb-2 ml-2 mt-4" type="text" class="dropdown-search" placeholder="Søg..." />
+              <div class="dropdown-content cursor-pointer">
+                <label><input class="mt-4" type="checkbox" name="option7" />Indbundet</label><br />
+                <label><input class="mt-4" type="checkbox" name="option8" />E-bog</label><br />
+                <label><input class="mt-4 mb-4" type="checkbox" name="option9" />Lydbog</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bg-white h-16 py-5 lg:ml-10">
-          <Button link="index.html" variant="primary" size="base" style="white">Ryd alle</Button>
+          <div class="bg-white h-16 py-5 lg:ml-10">
+            <Button link="index.html" variant="primary" size="base" style="white">Ryd alle</Button>
+          </div>
         </div>
       </div>
     </div>
@@ -127,6 +126,12 @@ import Genre from "../components/Genre.astro";
 <Genre />
 <Footer />
 <style>
+    @media (min-width: 300px) {
+    .box-section {
+      padding-inline: 30px;
+    }
+  }
+
   .nextbefore {
     /* font-size: var(--font-size-base); */
     color: var(--orange);
@@ -220,31 +225,17 @@ import Genre from "../components/Genre.astro";
 
   @media (max-width: 640px) {
     .dropdown-container {
-      /* background-color: var(--white);
+      background-color: var(--white);
       display: grid;
       grid-template-columns: 1fr;
       position: absolute;
-      top: 400px;
-      left: 5px;
-      width: 250px;
-      max-width: 100%; */
-      position: absolute;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background: #333;
-      -webkit-transition: left 0.5s ease;
-      transition: left 0.5s ease;
+      top: 450px;
+      left: -250px;
+      width: 250px; /* Juster bredden efter dit behov */
+      max-width: 100%;
+      transition: transform 4s ease-in-out; /* Add transition property */
+      transform: translateX(-100%); /* Start with the container off-screen */
     }
-
-    .dropdown-container .moved {
-      left: 200px;
-    }
-    /* .toggle-sidebar {
-      float: right;
-      margin-right: 90px;
-      cursor: pointer;
-    } */
 
     .blurBg {
       filter: blur(4px);
@@ -271,6 +262,7 @@ import Genre from "../components/Genre.astro";
   const mobileDropDown = document.querySelector(".mobile-down");
   const showMe = document.querySelector(".showMe");
   const products = document.querySelector(".products");
+  const toggle = document.querySelector("#toggle");
 
   mobileDropDown.addEventListener("click", openDropdown);
 
@@ -280,10 +272,6 @@ import Genre from "../components/Genre.astro";
 
   mobileDropDown.addEventListener("click", () => {
     products.classList.toggle("blurBg");
-  });
-
-  $(".dropdown-button").click(function () {
-    $(this).next().toggleClass("moved");
   });
 
   console.log(mobileDropDown);
