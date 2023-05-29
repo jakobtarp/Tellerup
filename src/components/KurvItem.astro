@@ -7,20 +7,21 @@ const {img, title, author, format, delivery, price} = Astro.props;
 <article>
     <div>
         <div class="imgContainer">
-            <img src={img} alt="book">
+            <a href="singleview.html">
+                <img src={img} alt="book">
+            </a>
         </div>
     </div>
     <div class="text">
-        <h3 class="h3">{title}</h3>
-        <p class="p">{author}</p>
-        <h3 class="h3">{format}</h3>
-        <p class="p">{delivery}</p>
+        <h3>{title}</h3>
+        <h4>{author}</h4>
+        <h3>{format}</h3>
+        <h4>{delivery}</h4>
     </div>
     <slot />
     <div class="right">
-        <h2 class="h2">{price}</h2>
-        <Button link="index.html" variant="ghost" style="red">Slet</Button>
-
+        <h2>{price}</h2>
+        <Button link="kurv.html" variant="ghost" style="red">Slet</Button>
     </div>
 </article>
 <style>
@@ -46,16 +47,8 @@ const {img, title, author, format, delivery, price} = Astro.props;
         gap: 10px;
         text-align: center;
     }
-    .h2 {
-        font-weight: var(--fontNormal);
-        font-size: 1.6rem;
-    }
-    .h3 {
-        font-weight: var(--fontBold);
-        font-size: 1rem;
-    }
-    .p {
-        font-size: 0.9rem;
+    h3 {
+        font-weight: var(--fontSemibold);
     }
     .right {
         display: flex;
